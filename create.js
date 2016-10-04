@@ -1,6 +1,6 @@
 const fs = require('fs');
 const csvtojson = require('csvtojson');
-const Pokemon = require('db');
+const Pokemon = require('./db');
 
 var Converter = csvtojson.Converter;
 var converter = new Converter({});
@@ -23,7 +23,7 @@ converter.on('end_parsed', function(data){
             Weight : data[i].Weight,
             Height : data[i].Height
         });
-        newUser.save(function(err){
+        newPokemon.save(function(err){
             if(err) throw err;
             console.log('PokemonId : ' + i + 'Create');
         });

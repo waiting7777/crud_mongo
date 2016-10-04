@@ -3,7 +3,7 @@ mongoose.connect('mongodb://localhost/pokemon');
 var Schema = mongoose.Schema;
 
 var PokemonSchema = new Schema({
-    PokemonId : String,
+    PokemonId : Number,
     NameEn : String,
     NameTw : String,
     Type : String,

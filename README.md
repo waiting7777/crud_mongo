@@ -56,3 +56,13 @@ Pokemon.find({}, function(err, pokemons){
     console.log(pokemons);
 });
 ```
+
+## Delete
+
+```js
+Pokemon.remove({}, function(err){
+    if(err) throw err;
+
+    console.log('Pokemon Deleted!');
+});
+```
