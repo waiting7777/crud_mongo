@@ -1,11 +1,22 @@
-const fs = require('fs');
-const csvtojson = require('csvtojson');
+const mongoose = require('mongoose');
+mongoose.connect('mongodb://localhost/pokemon');
+var Schema = mongoose.Schema;
 
-var Converter = csvtojson.Converter;
-var converter = new Converter({});
-
-converter.on('end_parsed', function(jsonArray){
-    console.log(jsonArray);
+var PokemonSchema = new Schema({
+    PokemonId : String,
+    NameEn : String,
+    NameTw : String,
+    Type : String,
+    MaxCp : Number,
+    BaseAtk : Number,
+    BaseDef : Number,
+    BaseSta : Number,
+    CaptureRate : Number,
+    FleeRate : Number,
+    Weight : Number,
+    Height : Number
 });
 
-fs.createReadStream('../pokemon/pokemon.csv').pipe(converter);
+var Pokemon = mongoose.model('Pokemon', PokemonSchema);
+
+module.exports = Pokemon;
