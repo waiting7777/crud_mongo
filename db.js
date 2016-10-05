@@ -14,7 +14,8 @@ var PokemonSchema = new Schema({
     CaptureRate : Number,
     FleeRate : Number,
     Weight : Number,
-    Height : Number
+    Height : Number,
+    Flavor : String
 });
 
 var ChargeMoveSchema = new Schema({
@@ -67,9 +68,9 @@ var Evolution = mongoose.model('Evolution', EvolutionSchema);
 var QuickMove = mongoose.model('QuickMove', QuickMoveSchema);
 var QuickMoveRelate = mongoose.model('QuickMoveRelate', QuickMoveRelateSchema);
 
-// module.exports = Pokemon;
+module.exports = Pokemon;
 // module.exports = ChargeMove;
 // module.exports = ChargeMoveRelate;
 // module.exports = Evolution;
 // module.exports = QuickMove;
-module.exports = QuickMoveRelate;
+// module.exports = QuickMoveRelate;

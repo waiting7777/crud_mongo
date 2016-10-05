@@ -21,7 +21,8 @@ converter.on('end_parsed', function(data){
             CaptureRate : data[i].CaptureRate,
             FleeRate : data[i].FleeRate,
             Weight : data[i].Weight,
-            Height : data[i].Height
+            Height : data[i].Height,
+            Flavor : data[i].Flavor
         });
         newPokemon.save(function(err){
             if(err) throw err;
