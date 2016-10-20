@@ -9,10 +9,16 @@ var newEvolution = Evolution({});
 
 converter.on('end_parsed', function(data){
     for(var i = 0; i < data.length; i++){
+
+        var temp1 = data[i].Evolution.split('|').map(Number);
+        if(typeof(data[i].Candy) == 'number'){
+            data[i].Candy = data[i].Candy.toString();
+        };
+        var temp2 = data[i].Candy.split('|').map(Number);
+        
         newEvolution = Evolution({
-            PokemonId : data[i].PokemonId,
-            Evolution : data[i].Evolution,
-            Candy : data[i].Candy
+            Evolution : temp1,
+            Candy : temp2
         });
         newEvolution.save(function(err){
             if(err) throw err;

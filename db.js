@@ -39,9 +39,8 @@ var ChargeMoveRelateSchema = new Schema({
 });
 
 var EvolutionSchema = new Schema({
-    PokemonId : Number,
-    Evolution : Number,
-    Candy : Number
+    Evolution : Array,
+    Candy : Array
 });
 
 var QuickMoveSchema = new Schema({
@@ -69,9 +68,9 @@ var Evolution = mongoose.model('Evolution', EvolutionSchema);
 var QuickMove = mongoose.model('QuickMove', QuickMoveSchema);
 var QuickMoveRelate = mongoose.model('QuickMoveRelate', QuickMoveRelateSchema);
 
-module.exports = Pokemon;
+// module.exports = Pokemon;
 // module.exports = ChargeMove;
 // module.exports = ChargeMoveRelate;
-// module.exports = Evolution;
+module.exports = Evolution;
 // module.exports = QuickMove;
 // module.exports = QuickMoveRelate;
