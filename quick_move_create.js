@@ -10,7 +10,7 @@ var newQuickMove = QuickMove({});
 converter.on('end_parsed', function(data){
     for(var i = 0; i < data.length; i++){
         newQuickMove = QuickMove({
-            ChargeMoveId : data[i].ChargeMoveId,
+            QuickMoveId : data[i].QuickMoveId,
             NameTw : data[i].NameTw,
             NameEn : data[i].NameEn,
             Type : data[i].Type,
