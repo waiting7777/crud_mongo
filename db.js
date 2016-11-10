@@ -61,16 +61,40 @@ var QuickMoveRelateSchema = new Schema({
     QuickMoveId : Number
 });
 
+var TypeSchema = new Schema({
+    Type : String,
+    Bug : Number,
+    Dark : Number,
+    Dragon : Number,
+    Electric : Number,
+    Fairy : Number,
+    Fighting : Number,
+    Fire : Number,
+    Flying : Number,
+    Ghost : Number,
+    Grass : Number,
+    Ground : Number,
+    Ice : Number,
+    Normal : Number,
+    Poison : Number,
+    Psychic : Number,
+    Rock : Number,
+    Steel : Number,
+    Water : Number
+});
+
 var Pokemon = mongoose.model('Pokemon', PokemonSchema);
 var ChargeMove = mongoose.model('ChargeMove', ChargeMoveSchema);
 var ChargeMoveRelate = mongoose.model('ChargeMoveRelate', ChargeMoveRelateSchema);
 var Evolution = mongoose.model('Evolution', EvolutionSchema);
 var QuickMove = mongoose.model('QuickMove', QuickMoveSchema);
 var QuickMoveRelate = mongoose.model('QuickMoveRelate', QuickMoveRelateSchema);
+var Type = mongoose.model('Type', TypeSchema);
 
 // module.exports = Pokemon;
 // module.exports = ChargeMove;
 // module.exports = ChargeMoveRelate;
 // module.exports = Evolution;
-module.exports = QuickMove;
+// module.exports = QuickMove;
 // module.exports = QuickMoveRelate;
+module.exports = Type;
