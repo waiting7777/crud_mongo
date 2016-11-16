@@ -66,6 +66,11 @@ var TypeSchema = new Schema({
     Relate : Array
 });
 
+var CpmSchema = new Schema({
+    Level : Number,
+    Cpm : Number
+});
+
 var Pokemon = mongoose.model('Pokemon', PokemonSchema);
 var ChargeMove = mongoose.model('ChargeMove', ChargeMoveSchema);
 var ChargeMoveRelate = mongoose.model('ChargeMoveRelate', ChargeMoveRelateSchema);
@@ -73,6 +78,7 @@ var Evolution = mongoose.model('Evolution', EvolutionSchema);
 var QuickMove = mongoose.model('QuickMove', QuickMoveSchema);
 var QuickMoveRelate = mongoose.model('QuickMoveRelate', QuickMoveRelateSchema);
 var Type = mongoose.model('Type', TypeSchema);
+var Cpm = mongoose.model('Cpm', CpmSchema);
 
 // module.exports = Pokemon;
 // module.exports = ChargeMove;
@@ -80,4 +86,5 @@ var Type = mongoose.model('Type', TypeSchema);
 // module.exports = Evolution;
 // module.exports = QuickMove;
 // module.exports = QuickMoveRelate;
-module.exports = Type;
+// module.exports = Type;
+module.exports = Cpm;
