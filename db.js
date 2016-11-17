@@ -68,8 +68,10 @@ var TypeSchema = new Schema({
 
 var CpmSchema = new Schema({
     Level : Number,
-    Cpm : Number
+    Cpm : Number,
+    Stardust : Number
 });
+
 
 var Pokemon = mongoose.model('Pokemon', PokemonSchema);
 var ChargeMove = mongoose.model('ChargeMove', ChargeMoveSchema);

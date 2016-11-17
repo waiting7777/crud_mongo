@@ -9,10 +9,11 @@ var newCpm = Cpm({});
 
 converter.on('end_parsed', function(data){
     for(var i = 0; i < data.length; i++){
-        
+
         newCpm = Cpm({
             Level : data[i].Level,
-            Cpm : data[i].Cpm
+            Cpm : data[i].Cpm,
+            Stardust : data[i].Stardust
         });
         newCpm.save(function(err){
             if(err) throw err;
