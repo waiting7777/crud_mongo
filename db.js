@@ -8,15 +8,19 @@ var PokemonSchema = new Schema({
     NameTw : String,
     Type1 : String,
     Type2 : String,
-    MaxCp : Number,
-    BaseAtk : Number,
-    BaseDef : Number,
-    BaseSta : Number,
+    Old_MaxCp : Number,
+    Old_BaseAtk : Number,
+    Old_BaseDef : Number,
+    Old_BaseSta : Number,
     CaptureRate : Number,
     FleeRate : Number,
     Weight : Number,
     Height : Number,
-    Flavor : String
+    Flavor : String,
+    BaseAtk : Number,
+    BaseDef : Number,
+    BaseSta : Number,
+    MaxCp : Number
 });
 
 var ChargeMoveSchema = new Schema({
@@ -82,11 +86,11 @@ var QuickMoveRelate = mongoose.model('QuickMoveRelate', QuickMoveRelateSchema);
 var Type = mongoose.model('Type', TypeSchema);
 var Cpm = mongoose.model('Cpm', CpmSchema);
 
-// module.exports = Pokemon;
+module.exports = Pokemon;
 // module.exports = ChargeMove;
 // module.exports = ChargeMoveRelate;
 // module.exports = Evolution;
 // module.exports = QuickMove;
 // module.exports = QuickMoveRelate;
 // module.exports = Type;
-module.exports = Cpm;
+// module.exports = Cpm;

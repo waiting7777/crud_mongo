@@ -23,7 +23,11 @@ converter.on('end_parsed', function(data){
             FleeRate : data[i].FleeRate,
             Weight : data[i].Weight,
             Height : data[i].Height,
-            Flavor : data[i].Flavor
+            Flavor : data[i].Flavor,
+            Old_MaxCp : data[i].Old_MaxCp,
+            Old_BaseAtk : data[i].Old_BaseAtk,
+            Old_BaseDef : data[i].Old_BaseDef,
+            Old_BaseSta : data[i].Old_BaseSta,
         });
         newPokemon.save(function(err){
             if(err) throw err;
